@@ -24,7 +24,7 @@ public class Main {
             System.out.println("-----------------------------------------------------");
 
             System.out.print("1. list instance\t");
-            System.out.println("2. available regions");
+            System.out.println("2. available zones");
             System.out.print("3. start instance\t");
             System.out.println("4. available regions");
             System.out.print("5. stop instance\t");
@@ -41,12 +41,7 @@ public class Main {
             
             if(menu_num==1)
             {
-            	System.out.println("Put your instance Id");
-            	instance_id=id.nextLine();
             	
-            	//StartInstance.startIns(ec2,instance_id);
-            	
-            	StartInstance.startIns(ec2,"i-077c7e78bf16a3391");
             }
             
             
@@ -56,7 +51,12 @@ public class Main {
             }
             else if(menu_num==3)
             {
+            	System.out.println("Put your instance Id");
+            	instance_id=id.nextLine();
             	
+            	//StartInstance.startIns(ec2,instance_id);
+            	
+            	StartInstance.startIns(ec2,"i-077c7e78bf16a3391");
             }
             else if(menu_num==4)
             {

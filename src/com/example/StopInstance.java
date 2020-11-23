@@ -12,11 +12,11 @@ public class StopInstance {
     {
 
 
-    	StopInstancesRequest request= new StopInstancesRequest()
-    			.withInstancesIds(instanceid);
-    			
-    	
-    	ec2.stopInstances(request);
-        
+//    	StopInstancesRequest request= new StopInstancesRequest()
+//    			.withInstancesIds(instanceid);
+//    			
+//    	
+//    	ec2.stopInstances(request);
+//        
     }
 }
