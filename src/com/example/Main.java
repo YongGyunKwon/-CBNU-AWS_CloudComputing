@@ -15,6 +15,7 @@ public class Main {
         int menu_num;
         String instance_id;
         
+        String instance_test="i-077c7e78bf16a3391";
         
         Scanner num = new Scanner(System.in);
         Scanner id = new Scanner(System.in);
@@ -41,7 +42,10 @@ public class Main {
             
             if(menu_num==1)
             {
+            	System.out.println("List Instance");
+            	ListInstance.listInstance(ec2);
             	
+            	System.out.println("Finish");
             }
             
             
@@ -56,7 +60,8 @@ public class Main {
             	
             	//StartInstance.startIns(ec2,instance_id);
             	
-            	StartInstance.startIns(ec2,"i-077c7e78bf16a3391");
+            	//for testing
+            	StartInstance.startIns(ec2,instance_test);
             }
             else if(menu_num==4)
             {
@@ -70,17 +75,26 @@ public class Main {
             {
             	
             }
+            
+            //rebootInstance
             else if(menu_num==7)
             {
+            	System.out.println("Put your instance Id");
+            	instance_id=id.nextLine();
             	
+            	RebootInstance.rebootInstance(ec2, instance_id);
+            	
+            	//for testing
+            	RebootInstance.rebootInstance(ec2, instance_test);
             }
+            
             else if(menu_num==8)
             {
             	
             }
-            else if(menu_num==9)
+            else if(menu_num==99)
             {
-            	return;
+            	break;
             }
             
         }
