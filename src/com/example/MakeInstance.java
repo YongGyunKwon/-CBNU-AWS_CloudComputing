@@ -14,7 +14,10 @@ public class MakeInstance {
 	
 	public static void makeInstance(AmazonEC2 ec2)
 	{
+		System.out.println("Put your new Instance ID what you want");
+		
 		Scanner ami=new Scanner(System.in);
+		
 		
 		String ami_id;
 		ami_id=ami.nextLine();
