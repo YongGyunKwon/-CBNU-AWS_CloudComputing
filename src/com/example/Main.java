@@ -48,9 +48,11 @@ public class Main {
             	System.out.println("Finish");
             }
             
-            
+            //Availablezones
             else if(menu_num==2)
             {
+            	AvailableZones.availableZone(ec2);
+            	
             	
             }
             else if(menu_num==3)
@@ -63,9 +65,11 @@ public class Main {
             	//for testing
             	StartInstance.startIns(ec2,instance_test);
             }
+            
+            //AvailableRegions
             else if(menu_num==4)
             {
-            	
+            	AvailableRegions.availableRegions(ec2);
             }
             else if(menu_num==5)
             {
@@ -100,6 +104,7 @@ public class Main {
             	RebootInstance.rebootInstance(ec2, instance_test);
             }
             
+            //list Images
             else if(menu_num==8)
             {
             	
