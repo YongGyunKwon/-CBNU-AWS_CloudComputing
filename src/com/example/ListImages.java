@@ -4,33 +4,34 @@ import com.amazonaws.services.ec2.AmazonEC2;
 import com.amazonaws.services.ec2.model.DescribeImagesRequest;
 import com.amazonaws.services.ec2.model.DescribeImagesResult;
 import com.amazonaws.services.ec2.model.Image;
-
+import java.util.List;
 
 public class ListImages {
 
 	public static  void listImages(AmazonEC2 ec2)
 	{
+		
 		DescribeImagesRequest request = new DescribeImagesRequest();
 
 		DescribeImagesResult response = ec2.describeImages(request);
 		
+		
+		System.out.println("list images");
+		
+		List<Image> images = response.getImages();
 
-		for(Image image : response.getImages()) {
-			System.out.printf(
-					"ImageID: %s, " +
-					"Name: %s, " + 
-					"Owner: %s,"+
-					"Is-public: %b"+
-					"Stste: %b"+
-					"State Reason: %s",
-					image.getImageId(),
-					image.getName(),
-					image.getOwnerId(),
-					image.getPublic(),
-					image.getState(),
-					image.getStateReason()
-					);
-		}
+		
+	    if (images.isEmpty()) {
+	    	System.out.println("Empty Image");
+	        
+	    }
+	    else
+	    {
+	    	for(Image image:images)
+	    	
+	    	System.out.printf(image.getImageId());
+	    	System.out.println("\n");
+	    }
 		
 		
 		System.out.println("Complete");

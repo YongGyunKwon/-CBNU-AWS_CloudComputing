@@ -81,10 +81,10 @@ public class Main {
             	System.out.println("Put your instance Id");
             	instance_id=id.nextLine();
             	
-            	//StopInstance.stopInstance(ec2,instance_id);
+            	StopInstance.stopInstance(ec2,instance_id);
             	
             	//for testing
-            	StopInstance.stopInstance(ec2,instance_test);
+            	//StopInstance.stopInstance(ec2,instance_test);
             	
             	
             }
@@ -103,10 +103,10 @@ public class Main {
             	System.out.println("Put your instance Id");
             	instance_id=id.nextLine();
             	
-            	//RebootInstance.rebootInstance(ec2, instance_id);
+            	RebootInstance.rebootInstance(ec2, instance_id);
             	
             	//for testing
-            	RebootInstance.rebootInstance(ec2, instance_test);
+            	//RebootInstance.rebootInstance(ec2, instance_test);
             }
             
             //list Images

@@ -14,7 +14,7 @@ public class MakeInstance {
 	
 	public static void makeInstance(AmazonEC2 ec2)
 	{
-		System.out.println("Put your new Instance ID what you want");
+		System.out.println("Put your AMI ID what you want");
 		
 		Scanner ami=new Scanner(System.in);
 		
@@ -22,7 +22,7 @@ public class MakeInstance {
 		String ami_id;
 		ami_id=ami.nextLine();
 		
-		RunInstancesRequest run_request=new RunInstancesRequest().withImageId(ami_id).withInstanceType(InstanceType.T1Micro).withMaxCount(1).withMinCount(0);
+		RunInstancesRequest run_request=new RunInstancesRequest().withImageId(ami_id).withInstanceType(InstanceType.T2Micro).withMaxCount(1).withMinCount(1);
 		
 		RunInstancesResult run_response=ec2.runInstances(run_request);
 		
