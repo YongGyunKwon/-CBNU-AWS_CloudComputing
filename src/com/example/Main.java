@@ -41,6 +41,7 @@ public class Main {
             System.out.println("Put menu's number");
             menu_num=num.nextInt();
             
+            //List Instance
             if(menu_num==1)
             {
             	System.out.println("List Instance");
@@ -56,6 +57,7 @@ public class Main {
             	
             	
             }
+            //Start Instance
             else if(menu_num==3)
             {
             	System.out.println("Put your instance Id");
@@ -67,11 +69,13 @@ public class Main {
             	StartInstance.startIns(ec2,instance_test);
             }
             
+            
             //AvailableRegions
             else if(menu_num==4)
             {
             	AvailableRegions.availableRegions(ec2);
             }
+            //Stop Instance
             else if(menu_num==5)
             {
             	System.out.println("Put your instance Id");
@@ -93,7 +97,7 @@ public class Main {
             	
             }
             
-            //rebootInstance
+            //RebootInstance
             else if(menu_num==7)
             {
             	System.out.println("Put your instance Id");
@@ -112,6 +116,7 @@ public class Main {
             	ListImages.listImages(ec2);
             	
             }
+            //Describe Accounts
             else if(menu_num==9)
             {
             	DescribeAccounts.describeAccounts(ec2);
@@ -119,6 +124,8 @@ public class Main {
             	System.out.println("Complete");
             	
             }
+            
+            //Quit
             else if(menu_num==99)
             {
             	break;
