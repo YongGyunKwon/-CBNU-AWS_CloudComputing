@@ -32,6 +32,7 @@ public class Main {
             System.out.println("6. create instance");
             System.out.print("7. reboot instance\t");
             System.out.println("8. list images");
+            System.out.println("9. Describe Accounts");
             System.out.println("\t\t\t\t\t99. quit");
 
 
@@ -108,6 +109,15 @@ public class Main {
             else if(menu_num==8)
             {
             	
+            	ListImages.listImages(ec2);
+            	
+            }
+            else if(menu_num==9)
+            {
+            	DescribeAccounts.describeAccounts(ec2);
+            	
+            	System.out.println("Complete");
+            	
             }
             else if(menu_num==99)
             {
@@ -115,7 +125,6 @@ public class Main {
             }
             
         }
-        
         
      
     }

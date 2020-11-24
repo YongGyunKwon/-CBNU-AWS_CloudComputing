@@ -29,9 +29,8 @@ public class ListInstance {
 							"Found instance with id %s, " +
 							"AMI %s, "+
 						    "type %s, " +
-							"state %s " +
-						    "and monitoring state %s" +
-							"and monitoring state %s",
+							"state %b " +
+						    "and monitoring state %b\n",
 							instance.getInstanceId(),
 							instance.getImageId(),
 							instance.getInstanceType(),
@@ -47,12 +46,8 @@ public class ListInstance {
 			{
 				finish_instance=true;
 			}
-			
-			
+				
 		}
 		
-		
-		
 	}
-	
 }
