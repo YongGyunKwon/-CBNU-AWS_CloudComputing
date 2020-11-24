@@ -27,8 +27,8 @@ public class ListInstance {
 				{
 					System.out.printf(
 							"Found instance with id %s, " +
-							"AMI %s, "+
-						    "type %s, " +
+							"Image ID %s, "+
+						    "Instance Type %s, " +
 							"state %b " +
 						    "and monitoring state %b\n",
 							instance.getInstanceId(),
