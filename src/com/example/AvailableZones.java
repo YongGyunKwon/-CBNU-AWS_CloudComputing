@@ -11,8 +11,10 @@ public class AvailableZones {
 	
 	public static void availableZone(AmazonEC2 ec2)
 	{
-		DescribeAvailabilityZonesResult regions_response =ec2.describeRegions();
-		
+//		DescribeAvailabilityZonesResult regions_response =ec2.describeRegions();
+//		
+//		for(Region region: )
+//		
 		
 		
 		

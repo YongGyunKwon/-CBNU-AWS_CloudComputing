@@ -69,10 +69,22 @@ public class Main {
             }
             else if(menu_num==5)
             {
+            	System.out.println("Put your instance Id");
+            	instance_id=id.nextLine();
+            	
+            	//StopInstance.stopInstance(ec2,instance_id);
+            	
+            	//for testing
+            	StopInstance.stopInstance(ec2,instance_test);
+            	
             	
             }
+            
+            //MakeInstance
             else if(menu_num==6)
             {
+            	System.out.println("You'll make Instance");
+            	MakeInstance.makeInstance(ec2);
             	
             }
             
@@ -82,7 +94,7 @@ public class Main {
             	System.out.println("Put your instance Id");
             	instance_id=id.nextLine();
             	
-            	RebootInstance.rebootInstance(ec2, instance_id);
+            	//RebootInstance.rebootInstance(ec2, instance_id);
             	
             	//for testing
             	RebootInstance.rebootInstance(ec2, instance_test);
@@ -98,7 +110,6 @@ public class Main {
             }
             
         }
-        
         
         
      

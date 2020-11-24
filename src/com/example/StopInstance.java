@@ -11,12 +11,14 @@ public class StopInstance {
     public static void stopInstance(AmazonEC2 ec2, String instanceid)
     {
 
-
-//    	StopInstancesRequest request= new StopInstancesRequest()
-//    			.withInstancesIds(instanceid);
-//    			
-//    	
-//    	ec2.stopInstances(request);
-//        
+    	
+		StopInstancesRequest request = new StopInstancesRequest().withInstanceIds(instanceid);
+		
+		ec2.stopInstances(request);
+		
+		System.out.println("Success");
+		System.out.printf("Instanceid: %s",instanceid);
+		
+		  
     }
 }

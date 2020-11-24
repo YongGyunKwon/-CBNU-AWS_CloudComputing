@@ -16,6 +16,10 @@ public class RebootInstance {
     	RebootInstancesResult response = ec2.rebootInstances(request);
     	
     	
+    	ec2.rebootInstances(request);
+    	
+    	
+    	
     }
 	
 	
